@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         // THIS FOR THE ANIMATION
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.anmation);
         Logo.setAnimation(animation);
-        Integer integer = new Integer(this,)
+
+        final Intent intent = new Intent(this,HomeActivity.class);
         Thread thread = new Thread(){
             @Override
             public void run() {
@@ -33,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
                     e.printStackTrace();
                 }
-                startActivity();
+                startActivity(intent);
             }
         };
+
+        thread.start();
     }
 }
