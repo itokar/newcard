@@ -52,6 +52,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         public MyViewHolde(@NonNull View itemView) {
             super(itemView);
 
+            // The
+
             card_imge = itemView.findViewById(R.id.card_image);
             name      = itemView.findViewById(R.id.card_name);
             price     = itemView.findViewById(R.id.card_price);
